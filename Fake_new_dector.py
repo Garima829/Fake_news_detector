@@ -39,8 +39,3 @@ tfidf_test=tfidf_vectorizer.transform(x_test)
 #Initializing Passive Aggresive Classifier
 pac=PassiveAggressiveClassifier(max_iter=1000)
 pac.fit(tfidf_train,y_train)
-
-#predicting Data Set
-y_pred=pac.predict(tfidf_test)
-score=accuracy_score(y_test,y_pred)
-print(f'Accuracy: {round(score*100,2)}%')
